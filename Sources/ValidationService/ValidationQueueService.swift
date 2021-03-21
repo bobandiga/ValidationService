@@ -1,5 +1,5 @@
 
-protocol ValidationQueueService: class {
+public protocol ValidationQueueService: class {
     
     /// Generic type of **validatedObject**
     associatedtype Value
@@ -8,10 +8,10 @@ protocol ValidationQueueService: class {
     associatedtype ErrorValue: Error
     
     /// The object to which the validation will be applied
-    var validatedObject: Value { get }
+    var validatedObject: Value { get set }
     
     /// Local rules store
-    var storage: ValidationStack<Rule<Value, ErrorValue>> { get set }
+    var storage: ValidationStack<Rule<Value, ErrorValue>> { get }
     
     /// Required init for each implementation
     /// - Parameter validatedObject: Generic object that will be validated

@@ -33,7 +33,7 @@ final class StringValidationServiceTests: XCTestCase {
                 
             })
         
-        XCTAssertNil(mockService?.storage.get())
+        XCTAssertTrue(mockService!.storage.isEmty)
     }
     
     func testErrorStorageEmpty() {
@@ -52,7 +52,7 @@ final class StringValidationServiceTests: XCTestCase {
                 
             })
         
-        XCTAssertNil(mockService?.storage.get())
+        XCTAssertTrue(mockService!.storage.isEmty)
     }
     
     func testSuccesFlow() {

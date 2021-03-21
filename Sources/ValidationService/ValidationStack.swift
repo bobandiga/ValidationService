@@ -1,6 +1,6 @@
 import Foundation
 
-struct ValidationStack<Value> {
+public struct ValidationStack<Value> {
     private var array: [Value] = []
     
     public init() {}
@@ -10,7 +10,15 @@ struct ValidationStack<Value> {
     }
 }
 
-extension ValidationStack {
+public extension ValidationStack {
+    var elements: [Value] {
+        return array
+    }
+    
+    var isEmty: Bool {
+        return array.isEmpty
+    }
+    
     mutating func add(_ value: Value) {
         array.append(value)
     }
