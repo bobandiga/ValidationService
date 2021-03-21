@@ -15,7 +15,7 @@ public extension ValidationStack {
         return array
     }
     
-    var isEmty: Bool {
+    var isEmpty: Bool {
         return array.isEmpty
     }
     
